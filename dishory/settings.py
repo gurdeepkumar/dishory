@@ -49,7 +49,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://dishory.gurdeepkumar.com",
 ]
 
-TAILWIND_APP_NAME = "theme"
 
 # Application definition
 INSTALLED_APPS = [
@@ -59,8 +58,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "tailwind",
-    "theme",
     "django_browser_reload",
     "core",
 ]
@@ -81,7 +78,7 @@ ROOT_URLCONF = "dishory.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -140,8 +137,7 @@ if DEBUG:
     ]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

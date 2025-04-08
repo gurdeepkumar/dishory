@@ -1,2 +1,2 @@
 # Dishory
-## Every dish has a story
+Every dish has a story
