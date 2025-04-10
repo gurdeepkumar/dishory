@@ -49,6 +49,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://dishory.gurdeepkumar.com",
 ]
 
+LOGIN_REDIRECT_URL = "home"  # Redirect after login
+LOGOUT_REDIRECT_URL = "login"  # Redirect after logout
 
 # Application definition
 INSTALLED_APPS = [
@@ -59,7 +61,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_browser_reload",
+    "widget_tweaks",
     "core",
+    "accounts",
 ]
 
 MIDDLEWARE = [
